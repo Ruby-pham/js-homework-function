@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Is number <input type="text" id="number-1" oninput="calculate()"/> a positive integer? :
+<span id="result">Result</span><br>
+<script>
+    // Bài 5: Viết hàm nhận vào một số , kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+    function positiveInteger(number) {
+        if(number>=0){return true}
+        else {return false}
+    }
+
+    function calculate() {
+        let number = +document.getElementById('number-1').value;
+        let result = positiveInteger(number);
+        document.getElementById('result').innerHTML = result;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Factorial of <input type="text" id="input" oninput="calculate()"/> is:<br>
+<span id="result">Result</span><br>
+<script>
+    // Bài 3: Viết hàm trả về giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    function factorial(number) {
+        if (number === 0 || number === 1) {
+            return 1;
+        } else {
+            let giaithua = 1;
+            for (let i = 1; i <= number; i++) {
+                giaithua = giaithua * i;
+            }
+            return giaithua;
+        }
+    }
+
+    function calculate() {
+        let number = document.getElementById('input').value;
+        let factorialResult = factorial(number);
+        document.getElementById('result').innerHTML = '+ Factorial is : ' + factorialResult;
+    }
+
+
+</script>
+</body>
+</html>

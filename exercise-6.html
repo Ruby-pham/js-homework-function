@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="add"></h2>
+<input type="text" id="number">
+<button onclick="addArray()">Add</button>
+<button onclick="calculate()">Total</button>
+<h3 id="result"></h3>
+<script>
+
+    // Bài 6: Viết hàm nhận vào 1 mảng, trả về tổng các số > 10
+    let arr = [];
+    function addArray(){
+        let number = +document.getElementById('number').value;
+        arr.push(number)
+        let text='';
+        for (let i = 0; i <arr.length; i++) {
+            text+=arr[i]+',';
+        }
+        document.getElementById('add').innerHTML= 'Array = ['+text+']';
+        document.getElementById('number').value='';
+    }
+    function calculate(){
+        let sum= 0;
+        // let text = '';
+        for (let i = 0; i <arr.length; i++) {
+            if(arr[i]>10){
+                sum+=arr[i];
+            }
+
+        }
+        document.getElementById('result').innerHTML = 'Sum of : '+sum;
+    }
+
+    // // let arr = [];
+    // // arr[0]= +prompt('nhap vao 1 so');
+    // // arr[1]= +prompt('nhap vao 1 so');
+    // // arr[2]= +prompt('nhap vao 1 so');
+    // // arr[3]= +prompt('nhap vao 1 so');
+    // // let result = getdata(arr);
+    // // console.log(result);
+
+
+
+</script>
+</body>
+</html>

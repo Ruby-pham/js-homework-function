@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Radius of <input type="text" id="input" oninput="calculate()"/> is:<br>
+<span id="result">Result of area</span><br>
+<span id="result1">Result of perimeter</span>
+<script>
+    // Bài 2: Viết hàm trả về diện tích, hàm tính chu vi hình tròn của bán kính được đưa vào. Gọi hàm vừa xây dựng được
+    function area(radius){
+        // let result = Math.pow(radius,2)* Math.PI;
+        return result = Math.pow(radius,2)* Math.PI;
+    }
+    function perimeter(radius){
+        // let result1 = radius*2* Math.PI;
+        return result1 = radius*2* Math.PI;
+    }
+    function calculate(){
+        let radius = document.getElementById('input').value;
+        let result = area(radius);
+        let result1 = perimeter(radius);
+        document.getElementById('result').innerHTML= '+ Area is : '+result;
+        document.getElementById('result1').innerHTML= '+ Perimeter is : '+result1;
+    }
+
+
+</script>
+</body>
+</html>
